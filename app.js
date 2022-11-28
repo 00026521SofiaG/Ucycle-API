@@ -4,11 +4,13 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require("./config/mongoose");
 const apiRouter = require("./routes/api/general.router");
+const cors = require("cors");
 
 var app = express();
 
 mongoose.connect();
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
