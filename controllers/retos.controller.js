@@ -4,13 +4,14 @@ const { Router } = require("express");
 const controller = {};
 
 controller.create = async (req,res) =>{
-    const {titulo_r, descripcion_r,imagen_r,complete} = req.body;
+    const {titulo_r, descripcion_r,imagen_r,complete, fecha_r} = req.body;
 
     const reto = new retos({
         titulo_r: titulo_r,
         descripcion_r: descripcion_r,
         imagen_r: imagen_r,
-        complete: complete
+        complete: complete,
+        fecha_r: fecha_r
     });
 
     const newReto = await reto.save();

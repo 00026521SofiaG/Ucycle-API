@@ -18,6 +18,10 @@ const retoSchema = new Schema({
     complete:{
         type : Boolean,
         default: false
+    },
+    fecha_r:{
+        type : String,
+        require : true
     }
 });
 

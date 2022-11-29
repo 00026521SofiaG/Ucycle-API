@@ -11,7 +11,9 @@ validators.createRetosValidator = [
         .notEmpty().withMessage("Image is optional")
         .isURL().withMessage("Upload an image with a URL"),
     body("complete")
-    .optional().isBoolean()
+    .optional().isBoolean(),
+    body("fecha_r")
+    .notEmpty().withMessage("Date required")
 ];
 
 module.exports = validators;
