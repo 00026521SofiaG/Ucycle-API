@@ -13,7 +13,8 @@ controller.create = async (req, res) => {
         nombre_v: nombre_v,
         correo_v:correo_v,
         carrera_v:carrera_v,
-        telefono_v:telefono_v
+        telefono_v:telefono_v,
+        fecha_v: fecha_v
     });
 
     const newVoluntariado = await voluntariado.save();

@@ -19,7 +19,9 @@ validators.createVoluntariadoValidator = [
         .notEmpty().withMessage("Carrer is required"),
     body("telefono_v")
         .notEmpty().withMessage("Telephone number is required")
-        .isMobilePhone().withMessage("A mobilephone number is required")   
+        .isMobilePhone().withMessage("A mobilephone number is required"),
+    body("fecha_v") 
+    .notEmpty().withMessage("Date is required")
 ];
 
 module.exports = validators;

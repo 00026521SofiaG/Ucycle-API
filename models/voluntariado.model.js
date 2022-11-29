@@ -35,6 +35,11 @@ const voluntariadoSchema = new Schema({
         type: String,
         require: true,
         trim: true
+    }, 
+    fecha_v: {
+        type: String,
+        require: true,
+        trim: true
     }
 });
 
